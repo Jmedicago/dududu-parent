@@ -71,6 +71,10 @@ public class Ret implements Serializable {
     }
 
     public String getMessage() {
+        String _msg = ConstUtils.getMsgConstName(this.code);
+        if (_msg == null)
+            _msg = "";
+        this.message = _msg;
         return this.message;
     }
 
