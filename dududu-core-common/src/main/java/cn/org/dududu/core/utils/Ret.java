@@ -2,6 +2,7 @@ package cn.org.dududu.core.utils;
 
 import cn.org.dududu.core.consts.Codes;
 import com.alibaba.fastjson.JSON;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
 
@@ -105,8 +106,10 @@ public class Ret implements Serializable {
         sb.append(success);
         sb.append("," + QUOTE + "message" + QUOTE + ":");
         sb.append(QUOTE + encode(this.getMessage()) + QUOTE);
-        sb.append("," + QUOTE + "info" + QUOTE + ":");
-        sb.append(QUOTE + encode(info) + QUOTE);
+        if (StringUtils.isNotBlank(info)) {
+            sb.append("," + QUOTE + "info" + QUOTE + ":");
+            sb.append(QUOTE + encode(info) + QUOTE);
+        }
         if (null != this.data) {
             sb.append("," + QUOTE + "data" + QUOTE + ":");
             if (data instanceof String) {
