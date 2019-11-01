@@ -87,7 +87,7 @@ public class Ret implements Serializable {
         return this.info;
     }
 
-    public Ret setData() {
+    public Ret setData(Object data) {
         this.data = data;
         return this;
     }
