@@ -9,6 +9,13 @@
     <modules>
         <module>dududu-core-common</module>
         <module>dududu-core-pojo</module>
+        <module>dududu-core-mapper</module>
+        <module>dududu-core-config</module>
+        <module>dududu-service-base</module>
+        <module>dududu-service-common</module>
+        <module>dududu-facade-base</module>
+        <module>dududu-web-base</module>
+        <module>dududu-web-www</module>
     </modules>
     <packaging>pom</packaging>
 
