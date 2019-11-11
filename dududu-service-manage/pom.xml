@@ -8,9 +8,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dududu-service-base</artifactId>
+    <artifactId>dududu-service-manage</artifactId>
 
-    <name>dududu-service-base</name>
+    <name>dududu-service-manage</name>
     <!-- FIXME change it to the project's website -->
     <url>http://dududu.org.cn</url>
 
@@ -19,21 +19,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>cn.org.dududu</groupId>
-            <artifactId>dududu-core-config</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.org.dududu</groupId>
-            <artifactId>dududu-core-mapper</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.org.dududu</groupId>
-            <artifactId>dududu-facade-base</artifactId>
-            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

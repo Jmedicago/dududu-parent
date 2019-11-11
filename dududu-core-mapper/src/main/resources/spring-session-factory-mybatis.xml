@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 配置mybatis sql session factory -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 配置数据源 -->
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 配置mybatis的映射器的路径 -->
+        <property name="mapperLocations"
+                  value="classpath:cn/org/dududu/core/mapper/*.xml"/>
+        <!-- 配置需要取类型别名的包名; -->
+        <property name="typeAliasesPackage" value="cn.org.dududu.core.pojo"/>
+    </bean>
+
+    <!-- 配置自动扫描mybatis映射器，自动创建映射器对象 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 会根据cn.org.dududu.core.mapper包中定义的接口，自动创建Mapper对象；bean的名为接口的名字（首字母小写） -->
+        <property name="basePackage" value="cn.org.dududu.core.mapper"/>
+    </bean>
+
+</beans>
